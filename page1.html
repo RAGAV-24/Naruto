@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🕸️Page 1</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes loading {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body class="flex flex-col items-center justify-center h-screen bg-white">
+  <img src="./Images/img2.png" class="w-64 h-64" alt="img2">
+  <div class="relative w-64 h-2 bg-gray-300 mt-5 overflow-hidden">
+    <div class="h-full bg-black" style="animation: loading 3s linear forwards;"></div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "page2.html";
+    }, 3000);
+  </script>
+</body>
+
+</html>
