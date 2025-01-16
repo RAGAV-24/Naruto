@@ -3,9 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Naruto World</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500;
+      }
+      100% {
+        box-shadow: 0 0 20px #ffa500, 0 0 30px #ffa500;
+      }
+    }
+    @keyframes bg-scroll {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: -200px 0;
+      }
+    }
+
+    body {
+      background-image: url('./Images/main_bg.png');
+      background-size: cover;
+      background-attachment: fixed;
+      animation: bg-scroll 15s linear infinite;
+    }
+
+    .chakra-container {
+      animation: glow 2s infinite alternate;
+    }
+  </style>
 </head>
-<body>
-  
+<body class="text-white bg-gray-900">
+  <nav class="bg-black bg-opacity-70 border-b-4 border-orange-600 py-4 px-8 flex justify-between items-center">
+    <a href="#" class="text-2xl font-bold text-orange-500">
+      <img src="./Images/img1.png" alt="Logo" class="inline w-12 h-12 mr-2">
+      Hidden Leaf Chronicles
+    </a>
+    <ul class="flex space-x-6 text-lg">
+      <li><a href="#" class="hover:text-orange-400">Home</a></li>
+      <li><a href="#about" class="hover:text-orange-400">About</a></li>
+      <li><a href="#characters" class="hover:text-orange-400">Characters</a></li>
+      <li><a href="#stories" class="hover:text-orange-400">Stories</a></li>
+      <li><a href="#contact" class="hover:text-orange-400">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="flex flex-col items-center justify-center h-screen bg-opacity-80 bg-black text-center">
+    <h1 class="text-5xl md:text-6xl font-bold text-orange-500">
+      Welcome to the Ninja World 🌟
+    </h1>
+    <p class="mt-4 text-xl italic text-gray-300">
+      "The journey of a thousand steps begins with a single leap of faith."
+    </p>
+    <button class="mt-8 px-6 py-3 bg-orange-600 hover:bg-orange-700 rounded-lg text-lg font-bold transition transform hover:scale-105">
+      Start Your Adventure
+    </button>
+  </header>
+
+  <!-- Container Section -->
+  <section class="p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="characters">
+    <div class="chakra-container bg-black bg-opacity-70 rounded-lg p-6 border-4 border-orange-500 hover:scale-105 transition transform">
+      <img src="./Images/naruto.png" alt="Naruto" class="w-32 h-32 mx-auto rounded-full">
+      <h2 class="text-2xl text-center mt-4">Naruto Uzumaki</h2>
+      <p class="text-gray-400 mt-2 text-center">
+        The hero of Konoha, the bearer of the Nine-Tails, and a dreamer of unity.
+      </p>
+    </div>
+    <div class="chakra-container bg-black bg-opacity-70 rounded-lg p-6 border-4 border-orange-500 hover:scale-105 transition transform">
+      <img src="./Images/sasuke.png" alt="Sasuke" class="w-32 h-32 mx-auto rounded-full">
+      <h2 class="text-2xl text-center mt-4">Sasuke Uchiha</h2>
+      <p class="text-gray-400 mt-2 text-center">
+        The avenger, a prodigy of the Uchiha clan, walking the path of redemption.
+      </p>
+    </div>
+    <div class="chakra-container bg-black bg-opacity-70 rounded-lg p-6 border-4 border-orange-500 hover:scale-105 transition transform">
+      <img src="./Images/sakura.png" alt="Sakura" class="w-32 h-32 mx-auto rounded-full">
+      <h2 class="text-2xl text-center mt-4">Sakura Haruno</h2>
+      <p class="text-gray-400 mt-2 text-center">
+        A healer, a warrior, and a symbol of unwavering determination.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black bg-opacity-70 py-4 px-8 text-center border-t-4 border-orange-600">
+    <p class="text-gray-400">
+      &copy; 2025 Hidden Leaf Chronicles. Designed for all shinobi fans.
+    </p>
+  </footer>
 </body>
 </html>

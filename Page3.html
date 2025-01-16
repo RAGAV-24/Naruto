@@ -123,7 +123,11 @@
   <script>
     const button = document.querySelector('button');
     const audio = document.getElementById('narutoAudio');
-    button.addEventListener('mouseover', () => audio.play());
+    button.addEventListener('click',fun1);
+    function fun1(){
+      window.location.href="Page4.html"
+    }
+    button.addEventListener('mouseover', audio.play());
   </script>
 </body>
 </html>
