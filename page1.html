@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🕸️Page 1</title>
+  <title>🔥Page 1🔥</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @keyframes loading {
@@ -16,13 +16,35 @@
         width: 100%;
       }
     }
+
+    body {
+      background-image: url('./Images/img2.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./Images/img2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    z-index: -1;
+  }
+
   </style>
 </head>
 
-<body class="flex flex-col items-center justify-center h-screen bg-white">
-  <img src="./Images/img2.png" class="w-64 h-64" alt="img2">
+<body class="flex flex-col items-center justify-center h-screen relative">
+  <img src="./Images/img1.png" class="w-90 h-64" alt="img2">
   <div class="relative w-64 h-2 bg-gray-300 mt-5 overflow-hidden">
-    <div class="h-full bg-black" style="animation: loading 3s linear forwards;"></div>
+    <div class="h-full bg-orange-600" style="animation: loading 3s linear forwards;"></div>
   </div>
 
   <script>

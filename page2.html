@@ -3,10 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🕸️Page 2</title>
+  <title>Naruto Story Login</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .chakra-glow {
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500;
+      }
+      100% {
+        box-shadow: 0 0 20px #ffa500, 0 0 30px #ffa500;
+      }
+    }
+    @keyframes bg-scroll {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: -200px 0;
+      }
+    }
+    body {
+      background-image: url('./Images/img2.png');
+      background-size: cover;
+      background-attachment: fixed;
+      animation: bg-scroll 10s linear infinite;
+    }
+  </style>
 </head>
-<body>
+<body class="h-screen flex items-center justify-center bg-gray-900 text-white">
+  <div class="bg-black bg-opacity-70 rounded-lg p-8 max-w-md w-full border-4 border-orange-600">
+    <div class="text-center">
+      <img src="./Images/img1.png" alt="Naruto Logo" class="w-48 mx-auto">
+      <h2 class="text-3xl font-bold mt-4">Enter the Ninja World</h2>
+      <p class="text-orange-400 italic">"The path of a ninja begins with you."</p>
+    </div>
+    <form class="mt-6">
+      <div class="mb-4">
+        <label for="username" class="block text-orange-500 font-medium mb-2">Ninja Name</label>
+        <div class="relative">
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter your ninja name"
+            class="w-full px-4 py-2 border border-orange-500 rounded-lg bg-black text-white chakra-glow focus:outline-none focus:ring-2 focus:ring-orange-500"
+            required>
+          <span class="absolute right-4 top-2.5 text-orange-500 text-xl">🔖</span>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="password" class="block text-orange-500 font-medium mb-2">Secret Jutsu</label>
+        <div class="relative">
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your secret jutsu"
+            class="w-full px-4 py-2 border border-orange-500 rounded-lg bg-black text-white chakra-glow focus:outline-none focus:ring-2 focus:ring-orange-500"
+            required>
+          <span class="absolute right-4 top-2.5 text-orange-500 text-xl">🔒</span>
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+        Enter Hidden Leaf 🌪️
+      </button>
+    </form>
+
+    <div class="mt-6 text-center">
+      <p class="text-gray-400">Not a ninja yet?
+        <a href="Page3.html" class="text-orange-400 hover:text-orange-500 font-medium">Join the academy</a>
+      </p>
+    </div>
+  </div>
+
+  <audio id="narutoAudio" src="./Images/naruto_mix.mp3"></audio>
+  <script>
+    const button = document.querySelector('button');
+    button.addEventListener('click',fun1);
+    function fun1(){
+      window.location.href="Page4.html"
+    }
+    const audio = document.getElementById('narutoAudio');
+    audio.volume = 0.1;
+    button.addEventListener('mouseover',audio.play());
+  </script>
 
 </body>
 </html>
